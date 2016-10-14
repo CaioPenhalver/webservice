@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="frete" type="frete"/>
+
+  <xs:complexType name="frete">
+    <xs:sequence>
+      <xs:element name="numeroDeProdutos" type="xs:int"/>
+      <xs:element name="valorTotalDaRemessa" type="xs:double"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+

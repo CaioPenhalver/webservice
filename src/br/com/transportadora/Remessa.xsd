@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="frete" type="frete"/>
+
+  <xs:element name="remessa" type="remessa"/>
+
+  <xs:complexType name="frete">
+    <xs:sequence>
+      <xs:element name="numeroDeProdutos" type="xs:int"/>
+      <xs:element name="valorTotalDaRemessa" type="xs:double"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="remessa">
+    <xs:sequence>
+      <xs:element name="documentoRemetente" type="xs:string"/>
+      <xs:element name="documentoDestinatario" type="xs:string"/>
+      <xs:element name="valorFrete" type="xs:double"/>
+      <xs:element ref="frete"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+
