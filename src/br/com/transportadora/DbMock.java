@@ -26,5 +26,6 @@ public class DBMock {
 	
 	public static void addRemessa(Remessa remessa){
 		remessas.add(remessa);
+		System.out.println(remessas);
 	}
 }

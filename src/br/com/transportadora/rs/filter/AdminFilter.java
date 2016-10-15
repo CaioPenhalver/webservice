@@ -10,7 +10,9 @@ import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
 
 
-@WebFilter("/AdminFilter")
+
+@WebFilter(filterName="/AdminFilter",
+			urlPatterns="/remessa/*")
 public class AdminFilter implements Filter {
 
     
@@ -25,7 +27,7 @@ public class AdminFilter implements Filter {
 
 	
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
-		
+		System.out.println("--------------->>>>>>>>>>>>>AdminFilter<<<<<<<<<<<<<-------------");
 		chain.doFilter(request, response);
 	}
 

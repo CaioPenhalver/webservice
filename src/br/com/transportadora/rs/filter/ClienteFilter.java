@@ -10,7 +10,9 @@ import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
 
 
-@WebFilter("/ClienteFilter")
+
+@WebFilter(filterName="/ClienteFilter",
+			urlPatterns="/frete/*")
 public class ClienteFilter implements Filter {
 
     
@@ -25,7 +27,7 @@ public class ClienteFilter implements Filter {
 
 	
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
-		
+		System.out.println("--------------->>>>>>>>>>>>>ClienteFilter<<<<<<<<<<<<<-------------");
 		chain.doFilter(request, response);
 	}
 
