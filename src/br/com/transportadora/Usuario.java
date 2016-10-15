@@ -2,21 +2,30 @@ package br.com.transportadora;
 
 public class Usuario {
 	
-	private String documento;
-	private String token;
+	private String nome;
+	private String senha;
+	private boolean admin;
 	
-	public String getDocumento() {
-		return documento;
+	public String getNome() {
+		return nome;
 	}
-	public void setDocumento(String documento) {
-		this.documento = documento;
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
-	public String getToken() {
-		return token;
+	public String getSenha() {
+		return senha;
 	}
-	public void setToken(String token) {
-		this.token = token;
+	public void setSenha(String senha) {
+		this.senha = senha;
 	}
+	public boolean isAdmin() {
+		return admin;
+	}
+	public void setAdmin(boolean admin) {
+		this.admin = admin;
+	}
+	
+	
 	
 	
 }

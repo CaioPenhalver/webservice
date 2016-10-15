@@ -8,9 +8,22 @@ public class DBMock {
 	private static List<Remessa> remessas = new ArrayList<>();
 	private static List<Usuario> usuarios = new ArrayList<>(); 
 	
-	public static Usuario getUsuario(String documento){
+	static{
+		Usuario usuarioCliente = new Usuario();
+		usuarioCliente.setAdmin(false);
+		usuarioCliente.setNome("Maria");
+		usuarioCliente.setSenha("123");
+		Usuario usuarioAdmin = new Usuario();
+		usuarioAdmin.setAdmin(true);
+		usuarioAdmin.setNome("Joao");
+		usuarioAdmin.setSenha("456");
+		usuarios.add(usuarioAdmin);
+		usuarios.add(usuarioCliente);
+	}
+	
+	public static Usuario getUsuario(String nome){
 		for(Usuario usuario : usuarios){
-			if(usuario.getDocumento().equals(documento))
+			if(usuario.getNome().equals(nome))
 				return usuario;
 		}
 		return null;
