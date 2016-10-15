@@ -3,7 +3,7 @@ package br.com.transportadora;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DbMock {
+public class DBMock {
 
 	private static List<Remessa> remessas = new ArrayList<>();
 	private static List<Usuario> usuarios = new ArrayList<>(); 

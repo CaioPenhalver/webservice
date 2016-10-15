@@ -15,7 +15,7 @@ public class Remessa {
 	@XmlElement(required=true)
 	private String documentoDestinatario;
 	
-	@XmlElement(required=true)
+	@XmlElement(required=false)
 	private double valorFrete;
 	
 	@XmlElement(required=true)
