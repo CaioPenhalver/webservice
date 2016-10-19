@@ -11,12 +11,12 @@ public class DBMock {
 	static{
 		Usuario usuarioCliente = new Usuario();
 		usuarioCliente.setAdmin(false);
-		usuarioCliente.setNome("Maria");
-		usuarioCliente.setSenha("123");
+		usuarioCliente.setNome("cliente");
+		usuarioCliente.setSenha("2468");
 		Usuario usuarioAdmin = new Usuario();
 		usuarioAdmin.setAdmin(true);
-		usuarioAdmin.setNome("Joao");
-		usuarioAdmin.setSenha("456");
+		usuarioAdmin.setNome("admin");
+		usuarioAdmin.setSenha("1357");
 		usuarios.add(usuarioAdmin);
 		usuarios.add(usuarioCliente);
 	}

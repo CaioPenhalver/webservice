@@ -9,24 +9,27 @@ import javax.xml.ws.BindingProvider;
 import javax.xml.ws.handler.MessageContext;
 
 import br.com.transportadora.clientgov.Exception_Exception;
+import br.com.transportadora.clientgov.Imposto;
 import br.com.transportadora.clientgov.WebServiceNF;
 import br.com.transportadora.clientgov.WebServiceNFService;
 
 public class Governo {
 
-	public void getImposto(){
+	public List<Imposto> getImposto() throws Exception{
 		
 		WebServiceNF port = new WebServiceNFService().getWebServiceNFPort();
-		Map<String, Object> reqContext = ((BindingProvider)port).getRequestContext();
-		Map<String, List<String>> headers = new HashMap<>();
+		Map<String, Object> requestContext = ((BindingProvider)port).getRequestContext();
+		Map<String, List<String>> headers = new HashMap<String, List<String>>();
+
 		headers.put("cpf", Collections.singletonList("12345678901"));
 		headers.put("password", Collections.singletonList("123"));
-		reqContext.put(MessageContext.HTTP_REQUEST_HEADERS, headers);
+
+		requestContext.put(MessageContext.HTTP_REQUEST_HEADERS, headers);
 		try {
-			System.out.println(port.listarImpostos());
+			return port.listarImpostos();
 		} catch (Exception_Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
+			throw new Exception(e);
 		}
 	}
 }
