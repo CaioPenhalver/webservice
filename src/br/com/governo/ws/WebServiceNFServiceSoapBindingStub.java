@@ -7,6 +7,8 @@
 
 package br.com.governo.ws;
 
+import br.com.transportadora.clientgov.Imposto;
+
 public class WebServiceNFServiceSoapBindingStub extends org.apache.axis.client.Stub implements br.com.governo.ws.WebServiceNF {
     private java.util.Vector cachedSerClasses = new java.util.Vector();
     private java.util.Vector cachedSerQNames = new java.util.Vector();
@@ -78,7 +80,7 @@ public class WebServiceNFServiceSoapBindingStub extends org.apache.axis.client.S
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("listarImpostos");
         oper.setReturnType(new javax.xml.namespace.QName("http://ws.governo.com.br/", "imposto"));
-        oper.setReturnClass(br.com.governo.ws.Imposto[].class);
+        oper.setReturnClass(Imposto[].class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "return"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
@@ -130,7 +132,7 @@ public class WebServiceNFServiceSoapBindingStub extends org.apache.axis.client.S
 
             qName = new javax.xml.namespace.QName("http://ws.governo.com.br/", "imposto");
             cachedSerQNames.add(qName);
-            cls = br.com.governo.ws.Imposto.class;
+            cls = Imposto.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
@@ -319,7 +321,7 @@ public class WebServiceNFServiceSoapBindingStub extends org.apache.axis.client.S
 }
     }
 
-    public br.com.governo.ws.Imposto[] listarImpostos() throws java.rmi.RemoteException, br.com.governo.ws.Exception {
+    public Imposto[] listarImpostos() throws java.rmi.RemoteException, br.com.governo.ws.Exception {
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -343,9 +345,9 @@ public class WebServiceNFServiceSoapBindingStub extends org.apache.axis.client.S
         else {
             extractAttachments(_call);
             try {
-                return (br.com.governo.ws.Imposto[]) _resp;
+                return (Imposto[]) _resp;
             } catch (java.lang.Exception _exception) {
-                return (br.com.governo.ws.Imposto[]) org.apache.axis.utils.JavaUtils.convert(_resp, br.com.governo.ws.Imposto[].class);
+                return (Imposto[]) org.apache.axis.utils.JavaUtils.convert(_resp, Imposto[].class);
             }
         }
   } catch (org.apache.axis.AxisFault axisFaultException) {

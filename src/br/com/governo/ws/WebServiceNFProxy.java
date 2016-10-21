@@ -1,5 +1,7 @@
 package br.com.governo.ws;
 
+import br.com.transportadora.clientgov.Imposto;
+
 public class WebServiceNFProxy implements br.com.governo.ws.WebServiceNF {
   private String _endpoint = null;
   private br.com.governo.ws.WebServiceNF webServiceNF = null;
@@ -62,7 +64,7 @@ public class WebServiceNFProxy implements br.com.governo.ws.WebServiceNF {
     webServiceNF.cadastrarUsuario(cpfOuCnpj, password);
   }
   
-  public br.com.governo.ws.Imposto[] listarImpostos() throws java.rmi.RemoteException, br.com.governo.ws.Exception{
+  public Imposto[] listarImpostos() throws java.rmi.RemoteException, br.com.governo.ws.Exception{
     if (webServiceNF == null)
       _initWebServiceNFProxy();
     return webServiceNF.listarImpostos();
